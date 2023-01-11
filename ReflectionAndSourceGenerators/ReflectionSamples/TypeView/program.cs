@@ -20,6 +20,10 @@ namespace CURSOIII.ReflectionAndSourceGenerators.ReflectionSamples.TypeView
             Console.WriteLine(OutputText.ToString());
             Console.ReadLine();
 
+            // El metodo AnalyzeType se implementa llamando
+            // a varias propiedades de Type para obtener
+            // informacion que necesita sobre los nombres 
+            // de los tipos. 
             void AnalyzeType(Type t)
             {
                 TypeInfo typeInfo = t.GetTypeInfo();
@@ -44,6 +48,8 @@ namespace CURSOIII.ReflectionAndSourceGenerators.ReflectionSamples.TypeView
             {
                 if (members.Count == 0) return;
                 AddToOutput($"\npublic {title}");
+                // elimina miembros sobrecargados mediante 
+                // el metodo Distinct. 
                 var names = members.Select(m => m.Name).Distinct();
                 AddToOutput(string.Join(" ", names));
             }
