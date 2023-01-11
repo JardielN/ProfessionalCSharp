@@ -9,4 +9,10 @@
     <Folder Include="Tasks\AsyncWindowsApps\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Calculator\Calculator.csproj" />
+    <ProjectReference Include="..\VectorClass\VectorClass.csproj" />
+    <ProjectReference Include="..\WhatsNewAttributes\WhatsNewAttributes.csproj" />
+  </ItemGroup>
+
 </Project>
